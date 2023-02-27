@@ -1,29 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { margin: 0; }
-    </style>
-    <link rel="stylesheet" href="./Style/Style.css">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link class="include" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link class="include" href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    
+    <link href="https://fonts.cdnfonts.com/css/audiowide" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/index-stylesheet.css">
 </head>
 
-<body>
-    <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+<body data-new-gr-c-s-check-loaded="14.1098.0" data-gr-ext-installed="" class="" id="page-top" data-new-gr-c-s-loaded="14.1098.0">
 
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://unpkg.com/three@0.149.0/build/three.module.js"
-          }
-        }
-    </script>
-    
-    <div class="car">
-        <script type="module" src="./Java/main.js"></script>
-    </div>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">animation by</span> cheng zhang</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">gallery</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">more</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="brand-heading text-center" id="glow-org">RUBO the Scavenger</h1>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/NOS_x5yHYQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <p class="intro-text" style="font-family: 'Audiowide', sans-serif;">Do robots dream of power core?</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>About rubo</h2>
+                <p>In a galaxy far far away</p>
+                <p>Rubo is a scavenger bot roaming in the space trying to find a power core replacement for its spaceship</p>
+                <p>While it discovers an abandoned spacestation, there are something waiting for it inside.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-12">
+                    <h2>art gallery of rubo</h2>
+                    <a href="./Gallery.html" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer">Visit gallery Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>more of cheng's works and contact</h2>
+                <p>Have Fun!</p>
+                <p><a href="mailto:mailto:qacwii1@gmail.com">qacwii1@gmail.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://worldchengz.com/" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer"><span class="network-name">website</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/chengz_00/" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer"><span class="network-name">instagram</span></a>
+                    </li>
+                    <li>
+                        <a href="https://flic.kr/ps/3NkhJU" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer"><span class="network-name">flickr</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p id="">Copyright © Cheng Zhang 2023</p>
+        </div>
+    </footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="js/jquery-easing.js"></script>
+<script id="main-script" src="js/index-scripts.js"></script>
 </body>
+
 </html>
