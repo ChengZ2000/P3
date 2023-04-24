@@ -1,0 +1,38 @@
+/* For webkit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: none;
+}
+
+body, html {
+    margin: 0;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+p {
+    margin: 0;
+    padding: 2px 0;
+    text-align: center;
+    color: rgb(255, 246, 238);
+}
+
+.text-box {
+    background-color: rgba(134, 134, 134, 0.5); /* Black background with 50% transparency */
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 60%;
+    margin: 20px auto;
+}

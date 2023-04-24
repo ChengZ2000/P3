@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.scrollbard {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.scrollbard::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.carousel, .carousel-item, .carousel-inner {
+    height: 100%;
+}
+  
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+    width: auto;
+}
+
+.carousel-control-prev, .carousel-control-next {
+height: 100%;
+display: flex;
+align-items: center;
+}
+
+.carousel-caption {
+    bottom: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-caption:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

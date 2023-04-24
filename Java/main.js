@@ -1,6 +1,7 @@
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@0.149.0/build/three.module.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.149.0/examples/jsm/loaders/GLTFLoader.js' ;
 import { OrbitControls } from 'https://unpkg.com/three@0.149.0/examples/jsm/controls/OrbitControls.js' ;
+
 
 const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(window.innerWidth,window.innerHeight);
@@ -9,11 +10,12 @@ document.body.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xdddddd);
 
-const camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
-camera.rotation.y = 45/180*Math.PI;
-camera.position.x = 800;
-camera.position.y = 100;
-camera.position.z = 1000;
+// Create a perspective camera
+const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1, 1000);
+// Set the camera position
+camera.position.set(-5, 20, 40);
+// Set the camera look-at point
+camera.lookAt(0, 25, 0);
 
 const light = new THREE.AmbientLight( 0x404040,3 );
 scene.add( light );
@@ -45,14 +47,40 @@ scene.add(light4);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.addEventListener('change', () => {renderer.render(scene, camera)});
-controls.target.set(0, 0, 0);
+controls.target.set(0, 10, 0);
 controls.update();
 
+let clock;
+// Declare the mixer variable here
+let mixer;
 
 const loader = new GLTFLoader();
-loader.load('./models/mazda_rx8.glb', function (gltf){
-    const model = gltf.scene;
-    model.position.set(0, 0, 0);
+let model; 
+loader.load('./models/ani test.glb', function (gltf){
+    model = gltf.scene;
+    model.position.set(0, -5, 0);
     scene.add(model);
-    renderer.render(scene, camera);
+
+   const animations = gltf.animations;
+   mixer = new THREE.AnimationMixer(model);
+   const animation = mixer.clipAction(animations[0]);
+
+   animation.play();
+   clock = new THREE.Clock();
 });
+
+// Render the scene
+function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  
+    // Update the animation
+    if (mixer) {
+      const deltaSeconds = clock.getDelta();
+      mixer.update(deltaSeconds);
+    }
+}
+
+animate();
+
+

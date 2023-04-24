@@ -1,3 +1,49 @@
-.car {
-    
+.scrollbard {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.scrollbard::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.buttons {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.floating-text {
+    position: fixed;
+    color: #fff;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+
+.text1 {
+    bottom: 10px;
+    left: 10px;
+}
+
+.text2 {
+    bottom: 40px;
+    left: 10px;
+}
+
+.text3 {
+    bottom: 70px;
+    left: 10px;
+}
+
+.text4 {
+    bottom: 100px;
+    left: 10px;
 }

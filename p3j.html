@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { margin: 0; }
+        body { margin: 0;}
     </style>
     <link rel="stylesheet" href="./Style/Style.css">
     <title>Document</title>
 </head>
 
-<body>
-    <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+<body class="scrollbard">
 
     <script type="importmap">
         {
@@ -22,8 +21,20 @@
         }
     </script>
     
-    <div class="car">
-        <script type="module" src="./Java/main.js"></script>
+    <div>
+        <script type="module" src="./Java/test.js"></script>
     </div>
+
+    <div id="buttons">
+        <button id="animation1" class="buttons">Look Around</button>
+        <button id="animation2" class="buttons">Punch</button>
+        <button id="animation3" class="buttons">Run</button>
+    </div>
+
+    <div class="floating-text text3">Left Click + Drag to rotate camera.</div>
+    <div class="floating-text text2">Shift + Left Click + Drag to move camera.</div>
+    <div class="floating-text text4">Scroll to zoom in/out.</div>
+    <div class="floating-text text1">Toggle the action tabs above to see what happens.</div>
+
 </body>
 </html>
